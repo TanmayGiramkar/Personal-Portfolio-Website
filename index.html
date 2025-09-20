@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GT's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: monospace;
+            background-color: slategrey;
+            color: black;
+        }
+
+        nav {
+            color: black;
+            background-color: darkgrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            font-size: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav ul li a:hover {
+            color: white;
+            font-size: 0.95rem;
+        }
+
+        main hr {
+            border: 0;
+            background: darkgrey;
+            height: 1.2px;
+            margin: 40px 85px;
+        }
+
+        .left {
+            font-size: 1.7rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstSection div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .buttons {
+            font-family: monospace;
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .leftSection .btn1,
+        .leftSection .btn2 {
+            display: inline-block;
+            align-items: center;
+            padding: 12px 20px; 
+            background: darkgrey;
+            color: black;
+            border: 2px solid slategrey;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            width: auto;
+            min-width: fit-content;
+        }
+
+        .btn1:hover {
+            cursor: pointer;
+            scale: 0.95;
+            transition: all 0.1s;
+        }
+
+        .btn2:active {
+            cursor: pointer;
+            scale: 0.95;
+            transition: all 0.1s;
+        }
+
+
+        .leftSection .btn3 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: darkgrey;
+            color: black;
+            border: 2px solid slategrey;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            width: auto;
+            min-width: fit-content;
+            overflow: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+
+
+        .btn3 div {
+            transition: transform 0.3s ease;
+        }
+
+        .icon {
+            opacity: 0;
+            transform: translateX(5px);
+            transition: all 0.3s ease;
+        }
+
+        .btn3:hover {
+            color: darkgrey;
+            background-color: black;
+        }
+
+        .btn3:hover>div {
+            transform: translateX(-5px);
+        }
+
+        .btn3:hover>.icon {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+
+
+        .rightSection img {
+            width: 80%;
+            border-radius: 10%;
+        }
+
+        .khaki {
+            color: khaki;
+        }
+
+
+        #element {
+            display: inline-block;
+            width: 14ch;
+            white-space: nowrap;
+            text-align: left;
+            color: khaki;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 23px;
+        }
+
+        .grey {
+            font-size: 25px;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 76vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 110px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            width: 150px;
+            font-size: 13px;
+            color: beige;
+        }
+
+        .footer {
+            background-color: darkgrey;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 20px;
+            height: 123px;
+            font-size: 23px;
+        }
+
+        .footer ul {
+            list-style: none;
+            font-size: 13px;
+            font-style: bold;
+        }
+
+        .footer>div {
+            width: 123px;
+        }
+
+        .text-center {
+            height: 35px;
+            padding-top: 5px;
+            font-size: 23px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            color: black;
+            /* align-items: baseline; */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">GT's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Info</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+
+            <div class="leftSection">Hi I am <span class="khaki">GT</span>
+                <div>I am a passionate</div>
+                <span id="element"></span>
+                <br>
+                <br>
+                <div class="buttons">
+                    <button class="btn1">GT's Resume</button>
+                    <button class="btn2">Gt's GitHub Profile</button>
+                    <button type="button" class="btn3">
+                        <span class="label">GT's LinkedIn Profile</span>
+                        <span class="icon" aria-hidden="true">➤</span>
+                    </button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="liinkedin profile.jpg">
+            </div>
+        </section>
+        <hr>
+
+        <section class="secondSection">
+            <span class="grey">What I have done so far</span>
+            <br>
+            <br>
+            <br>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cupiditate at dolorum eveniet
+                        sit, unde perspiciatis quam ea a, ab placeat blanditiis ex nulla maiores neque minima excepturi
+                        nesciunt quia.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">
+                        CSS Developer (2013-2015)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cupiditate at dolorum eveniet
+                        sit, unde perspiciatis quam ea a, ab placeat blanditiis ex nulla maiores neque minima excepturi
+                        nesciunt quia.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">
+                        JavaScript Developer (2016-18)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cupiditate at dolorum eveniet
+                        sit, unde perspiciatis quam ea a, ab placeat blanditiis ex nulla maiores neque minima excepturi
+                        nesciunt quia.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">
+                        FrontEnd Developer (2020-23)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cupiditate at dolorum eveniet
+                        sit, unde perspiciatis quam ea a, ab placeat blanditiis ex nulla maiores neque minima excepturi
+                        nesciunt quia.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">
+                        AI Agent (2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cupiditate at dolorum eveniet
+                        sit, unde perspiciatis quam ea a, ab placeat blanditiis ex nulla maiores neque minima excepturi
+                        nesciunt quia.
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="first">
+                <h3>GT's Developer Portfolio</h3>
+            </div>
+            <div class="second">
+                <ul>
+                    <li>Home</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div class="third">
+                <ul>
+                    <li>Handles</li>
+                    <li>Social</li>
+                    <li>Email</li>
+                    <li>CopyRights</li>
+                </ul>
+            </div>
+            <div class="fourth">
+                <ul>
+                    <li>Office</li>
+                    <li>Jobs</li>
+                    <li>NewsLetter</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center">
+            Copyrights &#169; www.GT'sPortfolio.com | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['FullStack Developer', 'UI/UX Agent', 'AI Agent'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 1230,
+            loop: true,
+            showCursor: false,
+        });
+    </script>
+</body>
+
+</html>
